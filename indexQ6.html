@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reverse Array Function</title>
+</head>
+<body>
+<h1>Reverse Array Function</h1>
+
+<p>Original array: <span id="originalArray"></span></p>
+<p>Reversed array: <span id="reversedArray"></span></p>
+
+<script>
+// Function to reverse an array
+function reverseArray(array) {
+    return array.slice().reverse();
+}
+
+// Original array
+const originalArray = [1, 2, 3, 4, 5];
+
+// Display original array
+document.getElementById("originalArray").innerText = originalArray.join(", ");
+
+// Reverse the array
+const reversedArray = reverseArray(originalArray);
+
+// Display reversed array
+document.getElementById("reversedArray").innerText = reversedArray.join(", ");
+</script>
+</body>
+</html>

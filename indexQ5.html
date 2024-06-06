@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sum of Squared Numbers</title>
+</head>
+<body>
+<h1>Sum of Squared Numbers</h1>
+
+<p>Original array: <span id="originalArray"></span></p>
+<p>Sum of squared numbers: <span id="sumOfSquaredNumbers"></span></p>
+
+<script>
+// Function to calculate the sum of squared numbers in an array
+function sumOfSquaredNumbers(array) {
+    return array.reduce((sum, element) => {
+        if (typeof element === 'number') {
+            return sum + element ** 2;
+        } else {
+            return sum;
+        }
+    }, 0);
+}
+
+// Original array of mixed data types
+const array = [4, 'hello', 3, true, 'Uki', 5];
+
+// Display original array
+document.getElementById("originalArray").innerText = array.join(", ");
+
+// Calculate sum of squared numbers
+const sum = sumOfSquaredNumbers(array);
+
+// Display sum of squared numbers
+document.getElementById("sumOfSquaredNumbers").innerText = sum;
+</script>
+</body>
+</html>

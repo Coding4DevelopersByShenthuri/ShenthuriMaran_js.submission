@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find Common Elements</title>
+</head>
+<body>
+<h1>Find Common Elements</h1>
+
+<div id="commonElements"></div>
+
+<script>
+// Function to find common elements between two arrays
+function findCommonElements(arr1, arr2) {
+    return arr1.filter(element => arr2.includes(element));
+}
+
+// Example usage
+console.log(findCommonElements([1, 2, 3], [3, 4, 5])); // [3]
+
+// Display the result
+document.getElementById("commonElements").innerText = findCommonElements([1, 2, 3], [3, 4, 5]);
+</script>
+
+</body>
+</html>

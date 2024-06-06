@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Update Employee Record</title>
+</head>
+<body>
+<h1>Update Employee Record</h1>
+
+<div id="updatedEmployee"></div>
+
+<script>
+// Function to update an employee's record
+function updateEmployeeRecord(employee, updates) {
+    // Merge the updates into the employee object
+    Object.assign(employee, updates);
+    return employee;
+}
+
+// Define the employee object and updates
+const employee = {name: 'John', position: 'Developer', salary: 50000};
+const updates = {position: 'Senior Developer', salary: 60000};
+
+// Update the employee record
+const updatedEmployee = updateEmployeeRecord(employee, updates);
+
+// Display the updated employee record
+document.getElementById("updatedEmployee").innerText = JSON.stringify(updatedEmployee);
+</script>
+
+</body>
+</html>

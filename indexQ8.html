@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get High Grades</title>
+</head>
+<body>
+<h1>Get High Grades</h1>
+
+<div id="highGradeStudents"></div>
+
+<script>
+// Function to get names of students with grades higher than 80
+function getHighGrades(students) {
+    const highGradeStudents = students.filter(student => student.grade > 80);
+    const highGradeNames = highGradeStudents.map(student => student.name);
+    return highGradeNames;
+}
+
+// Define the array of student objects
+const students = [
+    {name: 'Alice', grade: 90},
+    {name: 'Bob', grade: 70},
+    {name: 'Charlie', grade: 85}
+];
+
+// Get names of students with grades higher than 80
+const highGradeNames = getHighGrades(students);
+
+// Display the names of high-grade students
+document.getElementById("highGradeStudents").innerText = "Students with grades higher than 80: " + highGradeNames.join(", ");
+</script>
+
+</body>
+</html>

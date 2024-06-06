@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Person Object</title>
+</head>
+<body>
+<h1>Create Person Object</h1>
+
+<div id="personInfo"></div>
+
+<script>
+// Function to create a person object
+function createPerson(name, age) {
+    return {
+        name: name,
+        age: age,
+        greet: function() {
+            return "Hello, my name is " + this.name + " and I am " + this.age + " years old.";
+        }
+    };
+}
+
+// Create a person object
+const person = createPerson("John", 25);
+
+// Display person's greeting message
+document.getElementById("personInfo").innerText = person.greet();
+</script>
+
+</body>
+</html>

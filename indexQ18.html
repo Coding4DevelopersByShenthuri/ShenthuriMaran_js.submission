@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Factorial Calculation</title>
+</head>
+<body>
+<h1>Factorial Calculation</h1>
+
+<div id="factorialResult"></div>
+
+<script>
+// Recursive function to calculate factorial
+function factorial(n) {
+    // Base case: if n is 0 or 1, factorial is 1
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    // Recursive case: n * factorial(n-1)
+    return n * factorial(n - 1);
+}
+
+// Example usage
+const number = 5;
+const result = factorial(number);
+
+// Display the factorial result
+document.getElementById("factorialResult").innerText = "Factorial of " + number + " is: " + result;
+</script>
+
+</body>
+</html>
+

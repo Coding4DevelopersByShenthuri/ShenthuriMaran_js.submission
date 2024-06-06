@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register User</title>
+</head>
+<body>
+<h1>Register User</h1>
+
+<div id="registeredUsers"></div>
+
+<script>
+// Function to register a new user
+function registerUser(usersArray, newUser) {
+    // Check if the username already exists
+    const existingUser = usersArray.find(user => user.username === newUser.username);
+    // If user doesn't exist, add the new user
+    if (!existingUser) {
+        usersArray.push(newUser);
+        return "User registered successfully.";
+    } else {
+        return "Username already exists.";
+    }
+}
+
+// Define the array of user objects
+const users = [
+    {username: 'shenthuri_maran', name: 'Shenthuri Maran'},
+    {username: 'sathana_maran', name: 'Sathana Maran'}
+];
+
+// Define the new user object
+const newUser = {username: 'the_newusername', name: 'The New Username'};
+
+// Register the new user
+const registrationMessage = registerUser(users, newUser);
+
+// Display the registration message
+document.getElementById("registeredUsers").innerText = registrationMessage + "\nRegistered users: " + JSON.stringify(users);
+</script>
+
+</body>
+</html>

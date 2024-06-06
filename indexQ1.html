@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>String to Uppercase Converter</title>
+</head>
+<body>
+<h1>String to Uppercase Converter</h1>
+
+<p>Original strings: <span id="originalStrings"></span></p>
+<p>Uppercase strings: <span id="uppercaseStrings"></span></p>
+
+<script>
+// Function to convert an array of strings to uppercase
+function convertToUppercase(strings) {
+    return strings.map(str => str.toUpperCase());
+}
+
+// Original array of strings
+const strings = ["hello", "world"];
+
+// Display original strings
+document.getElementById("originalStrings").innerText = strings.join(", ");
+
+// Convert strings to uppercase
+const uppercaseStrings = convertToUppercase(strings);
+
+// Display uppercase strings
+document.getElementById("uppercaseStrings").innerText = uppercaseStrings.join(", ");
+</script>
+</body>
+</html>

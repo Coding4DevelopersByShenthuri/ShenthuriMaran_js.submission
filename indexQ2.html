@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Even Numbers Filter</title>
+</head>
+<body>
+<h1>Even Numbers Filter</h1>
+
+<p>Original numbers: <span id="originalNumbers"></span></p>
+<p>Even numbers: <span id="evenNumbers"></span></p>
+
+<script>
+// Function to filter even numbers from an array
+function filterEvenNumbers(numbers) {
+    return numbers.filter(num => num % 2 === 0);
+}
+
+// Original array of numbers
+const numbers = [1, 2, 3, 4, 5, 6];
+
+// Display original numbers
+document.getElementById("originalNumbers").innerText = numbers.join(", ");
+
+// Filter even numbers
+const evenNumbers = filterEvenNumbers(numbers);
+
+// Display even numbers
+document.getElementById("evenNumbers").innerText = evenNumbers.join(", ");
+</script>
+</body>
+</html>

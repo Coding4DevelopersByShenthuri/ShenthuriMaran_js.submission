@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory Value</title>
+</head>
+<body>
+<h1>Inventory Value</h1>
+
+<div id="totalValue"></div>
+
+<script>
+// Function to calculate the total value of the inventory
+function inventoryValue(products) {
+    // Initialize total value
+    let totalValue = 0;
+    
+    // Iterate through each product and calculate its value
+    for (const product of products) {
+        totalValue += product.price * product.quantity;
+    }
+    
+    return totalValue;
+}
+
+// Define the array of product objects
+const products = [
+    {name: 'Laptop', price: 1000, quantity: 5},
+    {name: 'Phone', price: 500, quantity: 10}
+];
+
+// Calculate the total value of the inventory
+const totalValue = inventoryValue(products);
+
+// Display the total value
+document.getElementById("totalValue").innerText = "Total inventory value: " + totalValue;
+</script>
+
+</body>
+</html>

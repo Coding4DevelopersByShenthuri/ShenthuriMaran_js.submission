@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply Discount</title>
+</head>
+<body>
+<h1>Apply Discount</h1>
+
+<div id="discountedPrice"></div>
+
+<script>
+// Function to apply a discount to a price
+function applyDiscount(price, discountPercentage = 10) {
+    const discountAmount = price * (discountPercentage / 100);
+    return price - discountAmount;
+}
+
+// Example usage
+const price = 100;
+const discountedPrice = applyDiscount(price); // Apply default 10% discount
+
+// Display the discounted price
+document.getElementById("discountedPrice").innerText = "Discounted price: " + discountedPrice;
+</script>
+
+</body>
+</html>

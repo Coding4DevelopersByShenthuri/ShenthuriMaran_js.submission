@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade Categorization</title>
+</head>
+<body>
+<h1>Grade Categorization</h1>
+
+<script>
+// Define the grade variable
+const grade = 85;
+
+// Categorize the grade
+let category;
+if (grade >= 90) {
+    category = "Excellent";
+} else if (grade >= 75) {
+    category = "Good";
+} else if (grade >= 50) {
+    category = "Average";
+} else {
+    category = "Poor";
+}
+
+// Display the category
+document.write("<p>Grade: " + grade + "</p>");
+document.write("<p>Category: " + category + "</p>");
+</script>
+
+</body>
+</html>

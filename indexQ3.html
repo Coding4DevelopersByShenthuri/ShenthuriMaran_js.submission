@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empty String Remover</title>
+</head>
+<body>
+<h1>Empty String Remover</h1>
+
+<p>Original strings: <span id="originalStrings"></span></p>
+<p>Non-empty strings: <span id="nonEmptyStrings"></span></p>
+
+<script>
+// Function to remove empty strings from an array
+function removeEmptyStrings(strings) {
+    return strings.filter(str => str.trim() !== "");
+}
+
+// Original array of strings
+const strings = ["hello","","world","","javascript"];
+
+// Display original strings
+document.getElementById("originalStrings").innerText = strings.join(", ");
+
+// Remove empty strings
+const nonEmptyStrings = removeEmptyStrings(strings);
+
+// Display non-empty strings
+document.getElementById("nonEmptyStrings").innerText = nonEmptyStrings.join(", ");
+</script>
+</body>
+</html>

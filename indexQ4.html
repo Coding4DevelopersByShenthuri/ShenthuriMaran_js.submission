@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>String Concatenation</title>
+</head>
+<body>
+<h1>String Concatenation</h1>
+
+<p>Array of words: <span id="wordArray"></span></p>
+<p>Concatenated string: <span id="concatenatedString"></span></p>
+
+<script>
+// Function to concatenate an array of strings into a single string with spaces
+function concatenateWords(words) {
+    return words.reduce((accumulator, currentValue) => accumulator + " " + currentValue);
+}
+
+// Original array of strings
+const words = ["hello", "world", "javascript"];
+
+// Display original array of words
+document.getElementById("wordArray").innerText = words.join(", ");
+
+// Concatenate words into a single string
+const concatenatedString = concatenateWords(words);
+
+// Display concatenated string
+document.getElementById("concatenatedString").innerText = concatenatedString;
+</script>
+</body>
+</html>

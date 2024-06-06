@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Task</title>
+</head>
+<body>
+<h1>Add Task</h1>
+
+<div id="taskList"></div>
+
+<script>
+// Function to add a task to the list of tasks
+function addTask(tasks, newTask) {
+    tasks.push(newTask);
+    return tasks;
+}
+
+// Define the tasks array
+const tasks = ['Buy groceries', 'Clean the house'];
+
+// Add a new task to the list
+const updatedTasks = addTask(tasks, 'Pay bills');
+
+// Display the updated list of tasks
+document.getElementById("taskList").innerText = updatedTasks.join(", ");
+</script>
+
+</body>
+</html>
